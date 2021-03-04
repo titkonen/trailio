@@ -4,7 +4,7 @@ import { AuthProvider } from './auth/Auth';
 import PrivateRoute from "./auth/PrivateRoute";
 import Login from "./auth/Login";
 
-import Tracker from "./Tracker";
+import LoggedIn from "./LoggedIn";
 
 function App() {
   return (
@@ -17,8 +17,7 @@ function App() {
             </Route>
           </Switch>
           <div>
-            <PrivateRoute exact path="/" component={Tracker} />
-            {/* <Route exact path="/signup" component={SignUp} /> */}
+            <PrivateRoute exact path="/" component={LoggedIn} />
           </div>
         </div>
       </Router>
