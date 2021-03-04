@@ -1,38 +1,217 @@
-.App {
-  text-align: center;
+/* BRAND ELEMENTS */
+
+.logo {
+  color: #22FFFF;
+  margin-left: 16px;
+  background-color: #ccc; 
+  margin-top: -1px;
+  padding-top: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* CONTAINERS */
+
+/* .table-container {
+  color: #000;
+  background-color: #fff;
+  margin: 0px 16px 8px 16px;
+  border-radius: 8px;
+  padding: 16px;
+} */
+
+.header {
+  margin-top: -30px;
+  height: 120px;
+  width: 100%;
+  background-color: #1800FF; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-navigation {
+  background-color: #1800FF;
+  height: 50px;
+  margin-top: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+li {
+  float: left;
+}
+
+
+/* TEXT STYLING */
+
+.heading {
+  margin-left: 36px;
+  color: white;
+  font-size: 42px;
+  padding-top: 50px;
+}
+
+.subheading {
+  padding-top: 32px;
+  color: #555;
+  margin-bottom: -4px;
+}
+
+.ingress {
+
+}
+
+/* SPACING */
+
+
+
+/* BUTTONS */
+
+.button-blue {
+  color: #1E88E5;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.button-red {
+  color: red;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* TABLELIST */
+.tablelist-bg {
+  background-color: #fff;
+  border-radius: 8px;
+  max-width: 800px;
+  padding: 12px 12px 0px 12px;
+  margin: 20px 0px 0px 40px;
+}
+
+/* OTHER */
+
+.input {
+  margin: 0px 12px 12px 0px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 8px;
+  background-color: #eee;
+}
+
+.input-number {
+  margin: 0px 12px 12px 0px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 8px;
+  background-color: #eee;
+}
+
+.input-heading {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.listmarker {
+  list-style-type: none;
+}
+
+/* .toast-style {
+  background-color: darkgreen;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+  position: 'relative';
+  width: 90px
+} */
+
+.sign-out {
+  background-color: lavender;
+  margin: auto;
+}
+
+.login-form {
+  background-color: #fff;
+  width: 300px;
+  border-radius: 16px;
+  float: right;
+  padding: 32px;
+  margin: 0px 32px 0px 0px;
+} 
+
+.input-login {
+  margin: 0px 12px 12px 0px;
+  width: 234px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  padding: 8px;
+  background-color: #eee;
+}
+
+.login-form-title {
+  color: #000;
+  font-family: avenir, helvetica, arial;
+  font-weight: 900;
+  padding: 12px 0px;
+}
+
+.button-primary {
+  background: #1E88E5;
+  border-radius: 24px;
+  width: 100px;
+  padding: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover {
+  opacity: 0.8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 736px) { 
+  .table-container { 
+    width: 710px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .input {
+    width: 150px;
   }
+
+  .input-heading {
+    width: 240px;
+  }
+
+}
+
+@media only screen and (max-width: 414px) { 
+
+  .tablelist-bg {
+    margin: 8px;
+  }
+
+  .input {
+    width: 160px;
+  }
+
+  .input-heading {
+    width: 270px;
+  }
+
+  .input-number {
+    width: 30px;
+  }
+
+  .table-container {
+    width: 390px;
+    margin: 8px 16px 0px 16px;
+  }
+
+  .listmarker {
+    list-style-type: none;
+    margin-left: 0px;
+  }
+
 }
