@@ -1,13 +1,12 @@
 import React, { useState, useCallback, useContext } from "react";
-// import WelcomeView from "../Views/WelcomeView";
 import { withRouter, Redirect } from "react-router";
+import { Jumbotron, Container, Row, Button, Tabs, Tab } from 'react-bootstrap';
+import '../App.css';
 
 // ENVIRONMENT IMPORT
 // import app from "./base.js";
 import { AuthContext } from "./Auth.js";
-import '../App.css';
 import firebase from '../firebase';
-import { Jumbotron, Container, Row, Button, Tabs, Tab } from 'react-bootstrap';
 
 const Login = ({ history }) => {
    const [key, setKey] = useState('home');
@@ -55,11 +54,8 @@ const Login = ({ history }) => {
                   <h1 className="#">Trailio</h1>
                </Row> 
                <Row>
-                  <h3 className="#">
-                     Bike route and data tracker
-                  </h3>
+                  <h3 className="#">Bike route and data tracker</h3>
                </Row>
-             
                <Row>
                   <div className="login-form">
                      <Tabs id="controlled-tab-example" activeKey={key} onSelect={(k) => setKey(k)} >
@@ -82,12 +78,8 @@ const Login = ({ history }) => {
                      </Tabs>
                   </div>
                </Row>
-
-
             </Container>
          </Jumbotron >
-
-         {/* <WelcomeView /> */}
       </div >
    );
 };
