@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="104" height="112" viewBox="0 0 104 112">
+  <defs>
+    <clipPath id="clip-logo">
+      <rect width="104" height="112"/>
+    </clipPath>
+  </defs>
+  <g id="logo" clip-path="url(#clip-logo)">
+    <g id="Trail-tracker-logo" transform="translate(-277.015 -236.997)">
+      <path id="Header_arrow" data-name="Header arrow" d="M492.1,253l13.985,24.229H478.112Z" transform="translate(-163.192)" fill="#04bfbf"/>
+      <path id="Header_arrow_copy" data-name="Header arrow copy" d="M328.635,818.792,364.256,804h-71.24Z" transform="translate(0 -485.795)" fill="#04bfbf"/>
+      <path id="Header_arrow_copy-2" data-name="Header arrow copy" d="M491.069,482.84,505.132,477H477.006Z" transform="translate(-162.217 -197.494)" fill="#04bfbf"/>
+      <path id="Polygon_1_copy_3" data-name="Polygon 1 copy 3" d="M581.707,485l19.7,34.2h-39.4Z" transform="translate(-237.16 -204.543)" fill="#04bfbf"/>
+      <path id="Polygon_1_copy_3-2" data-name="Polygon 1 copy 3" d="M315.707,485l19.7,34.2h-39.4Z" transform="translate(-2.639 -204.543)" fill="#04bfbf"/>
+    </g>
+  </g>
+</svg>

@@ -2,8 +2,11 @@ import React from 'react';
 import { Nav, NavItem, Button} from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faHome, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 import firebase from '../firebase';
+import Trailiologo from '../assets/logo.svg';
+import '../App.css';
+
 
 const tabs = [{
   route: "/record",
@@ -13,19 +16,21 @@ const tabs = [{
   route: "/diary",
   icon: faHome,
   label: "Diary"
-},{
-  route: "/maintenance",
-  icon: faHome,
-  label: "Maintenance"
-},{
-  route: "/notes",
-  icon: faSearch,
-  label: "Notes"
-},{
-  route: "/spots",
-  icon: faUserCircle,
-  label: "Spots"
-}]
+}
+// },{
+//   route: "/maintenance",
+//   icon: faHome,
+//   label: "Maintenance"
+// },{
+//   route: "/notes",
+//   icon: faSearch,
+//   label: "Notes"
+// },{
+//   route: "/spots",
+//   icon: faUserCircle,
+//   label: "Spots"
+// }
+]
 
 const Navigation = (props) => {
 
@@ -33,19 +38,21 @@ const Navigation = (props) => {
     <div>
       <nav className="navbar navbar-expand-md navbar-light d-none d-lg-block sticky-top" role="navigation">
         <div className="container-fluid">
-            <a className="navbar-brand" href="/record">LOGO</a>
-            <Nav className="ml-auto">
+            <a className="navbar-brand" href="/">
+              <img src={Trailiologo} alt="Logo" />
+            </a>
+            <Nav className="#">
               <NavItem>
-                <NavLink to="/record" className="nav-link">
+                <NavLink to="/record" className="desktop-nav">
                   Record
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/diary" className="nav-link">
+                <NavLink to="/diary" className="desktop-nav">
                   Diary
                 </NavLink>
               </NavItem>
-              <NavItem>
+              {/* <NavItem>
                 <NavLink to="/maintenance" className="nav-link">
                   Maintenance
                 </NavLink>
@@ -59,9 +66,9 @@ const Navigation = (props) => {
                 <NavLink to="/spots" className="nav-link">
                   Spots
                 </NavLink>
-              </NavItem>
+              </NavItem> */}
               <NavItem>
-                <NavLink to="/login" className="nav-link">
+                <NavLink to="/login" className="desktop-nav">
                 <Button onClick={() => firebase.auth().signOut()}>
                Log out
             </Button>
