@@ -15,7 +15,7 @@ const LoggedIn = () => {
    return (
       <div className="App">
          <BrowserRouter>
-            <h5>User is logged in.</h5>
+            <p className="logged-in-label body-small">User is logged in.</p>
             <Navigation />
             <Switch>
                <Route path="/record" component={Record} />

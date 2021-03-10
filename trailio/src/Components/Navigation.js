@@ -68,10 +68,8 @@ const Navigation = (props) => {
                 </NavLink>
               </NavItem> */}
               <NavItem>
-                <NavLink to="/login" className="desktop-nav">
-                <Button onClick={() => firebase.auth().signOut()}>
-               Log out
-            </Button>
+                <NavLink to="/login">
+                  <Button className="log-out desktop-nav" variant="link" onClick={() => firebase.auth().signOut()}>Log out</Button>
                 </NavLink>
         
               </NavItem>

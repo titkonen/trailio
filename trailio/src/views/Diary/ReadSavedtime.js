@@ -1,34 +1,46 @@
 import React from 'react';
 import firebase from '../../firebase';
+import '../../App.css';
 import { Button } from 'react-bootstrap';
+
 
 export const ReadSavedtime = ({ aika }) => {
    const [uusiaika, setUusiaika] = React.useState(aika.uusiaika);
    const [date, setDate] = React.useState(aika.date);
-   
+
+   const onUpdate = (event) => {
+      const db = firebase.firestore()
+      db.collection('timers').doc(aika.id).set({ ...aika, date, uusiaika })
+      event.preventDefault();
+   }
+
    const onDelete = () => {
       const db = firebase.firestore()
       db.collection('timers').doc(aika.id).delete()
    }
 
    return (
-      <div className="TimeListContainer">
-         <div className="TimeList">
-            <input 
+      <div className="#">
+         <div className="#">
+            <input
                value={uusiaika}
-               className="Timelist-time"
+               className="input"
+               size="10"
                onChange={(event) => setUusiaika(event.target.value)}
             />
-            <input 
+            <input
                value={date}
-               className="Timelist-date"
+               className="input"
+               size="10"
                onChange={(event) => setDate(event.target.value)}
             />
-            <div className="delete-button">
-               <Button onClick={onDelete}>
-                  Delete
-               </Button>
-            </div>
+            <Button className="button-secondary" onClick={onUpdate}>
+               Update
+            </Button>
+            <Button className="button-secondary" onClick={onDelete}>
+               Delete
+            </Button>
+
          </div>
       </div>
    )

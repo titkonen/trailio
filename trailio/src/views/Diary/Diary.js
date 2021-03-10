@@ -18,15 +18,12 @@ function Diary() {
 
   return (
     <div className="table-container">
-    
       <h1 className="heading">Saved trails</h1>
-
       {saveTime.map(aika => (
-        <div className="grid-container" key={aika.uusiaika}>
-          <div className="grid-item"><ReadSavedtime aika={aika} /></div>
+        <div className="tablelist-container" key={aika.uusiaika}>
+          <div className="tablelist-cell"><ReadSavedtime aika={aika} /></div>
         </div>
       ))}
-
     </div>
   );
 }

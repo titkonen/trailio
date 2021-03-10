@@ -36,14 +36,18 @@ function Stopwatch() {
 
    return (
       <div className="#">
-         <h1 classname="heading">Tracking</h1>
+         <h1 className="heading">Tracking</h1>
          <div className="StopwatchWrapper">
-           <div>{elapsedTime}s</div>
+           <div className="running-number">{elapsedTime}s</div>
           <div>
-            <Button disabled={elapsedTime === "0.0"} onClick={handleLapOrReset}>
+            <Button 
+              className="button-primary"
+              disabled={elapsedTime === "0.0"} 
+              onClick={handleLapOrReset}>
               {isRunning ? "+Lap" : "Reset"}
             </Button>
             <Button
+              className="button-primary"
               onClick={handleStartStop}
               status={isRunning ? "running" : "stopped"}
             >
@@ -53,7 +57,7 @@ function Stopwatch() {
   
           <div className="#">
             <form>
-               <input className="input-login"
+               <input className="input-record"
                   placeholder="Add year-month-date"
                   value={trackingdate}
                   onChange={(event) => setTrackingdate(event.target.value)}
@@ -62,7 +66,7 @@ function Stopwatch() {
           </div>
   
           <div className="SaveTimeButton">
-            <Button color="primary" onClick={addTrackingdate}>Save</Button>
+            <Button className="button-secondary" onClick={addTrackingdate}>Save</Button>
           </div>
           
         </div>
